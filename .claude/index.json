@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-11-08T19:05:52.000Z",
+  "project": "MiniNote2",
+  "rootPath": "/Users/longpeng/DevEcoStudioProjects/MiniNote2",
+  "modules": [
+    {
+      "path": "entry",
+      "type": "HarmonyOS应用模块",
+      "entry": "entry/src/main/ets/entryability/EntryAbility.ets",
+      "pages": ["pages/Index", "pages/NoteEdit"],
+      "services": ["NoteDataManager", "ThemeManager"],
+      "models": ["Note"],
+      "testCoverage": "基础单元测试",
+      "configFiles": ["module.json5", "build-profile.json5", "oh-package.json5"]
+    }
+  ],
+  "coverage": {
+    "totalFiles": 98,
+    "scannedFiles": 15,
+    "coveragePercentage": 15.3,
+    "modulesScanned": 1,
+    "gaps": [
+      "缺乏完整的单元测试",
+      "缺乏UI测试覆盖",
+      "缺少API文档",
+      "ThemeManager服务未在UI中实际使用"
+    ]
+  },
+  "ignoredPaths": [
+    "build/**",
+    "oh_modules/**",
+    "*.msgpack",
+    "*.protoBin",
+    "*.cache",
+    "certificates/**"
+  ],
+  "truncated": false,
+  "nextSteps": [
+    "补充完整的单元测试",
+    "创建UI测试用例",
+    "完善ThemeManager的集成使用",
+    "添加API文档和用户指南"
+  ]
+}

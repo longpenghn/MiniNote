@@ -1,0 +1,83 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "debug",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/longpeng/.ohos/config/debug_MiniNote2__DlsxuX8fEF9dqNTpuM2eEKQ-9jh8tCcJ9BBzwlhbVo=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B611BE67E56C09827049DD2D9FF879FFAC29DAA1973E40CCA7BD2911CF099ACDCCBBFBC255BCC44",
+          "profile": "/Users/longpeng/.ohos/config/debug_MiniNote2__DlsxuX8fEF9dqNTpuM2eEKQ-9jh8tCcJ9BBzwlhbVo=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/longpeng/.ohos/config/debug_MiniNote2__DlsxuX8fEF9dqNTpuM2eEKQ-9jh8tCcJ9BBzwlhbVo=.p12",
+          "storePassword": "0000001B9FCDE2CDAF05BA90AAB6D74F6DC4452E25BF965D060800537C8287D7621C6FB8F327D0E01C8BD8"
+        }
+      }
+      //      {
+      //        "name": "release",
+      //        "type": "HarmonyOS",
+      //        "material": {
+      //          "storeFile": "./certificates/release.p12",
+      //          "storePassword": "your_release_password",
+      //          "keyAlias": "releaseKey",
+      //          "keyPassword": "your_release_key_password",
+      //          "profile": "./certificates/release.p7b",
+      //          "certpath": "./certificates/release.cer",
+      //          "signAlg": "SHA256withECDSA"
+      //        }
+      //      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "debug",
+        "targetSdkVersion": "5.0.5(17)",
+        "compatibleSdkVersion": "5.0.5(17)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      },
+      //      {
+      //        "name": "release",
+      //        "signingConfig": "release",
+      //        "targetSdkVersion": "5.0.5(17)",
+      //        "compatibleSdkVersion": "5.0.5(17)",
+      //        "runtimeOS": "HarmonyOS",
+      //        "buildOption": {
+      //          "strictMode": {
+      //            "caseSensitiveCheck": true,
+      //            "useNormalizedOHMUrl": true
+      //          }
+      //        }
+      //      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      //      {
+      //        "name": "release"
+      //      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default",
+            //            "release"
+          ]
+        }
+      ]
+    }
+  ]
+}
